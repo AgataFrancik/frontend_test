@@ -15,10 +15,22 @@ const Home = ({onReset, onAddName, isShowed, isShowedBonus}) => {
     const [content, setContent] = useState([""]);
 
     useEffect(() => {
-      const storedContent = JSON.parse(localStorage.getItem('content'));
-      if (storedContent) {
-        setContent(storedContent);
+      // const storedContent = JSON.parse(localStorage.getItem('content'));
+      // if (storedContent) {
+      //   setContent(storedContent);
+      // }
+      const storedContent = localStorage.getItem('content');
+    if (storedContent) {
+      try {
+        console.log("dtored"+ storedContent)
+        const parsedContent = JSON.parse(storedContent);
+        console.log("parsed"+ parsedContent)
+        setContent(Array.isArray(parsedContent) ? parsedContent : [parsedContent]);
+      } catch (e) {
+        console.error("Error parsing content from localStorage", e);
+        setContent([]);
       }
+    }
     }, []);
   
     useEffect(() => {
@@ -29,7 +41,22 @@ const Home = ({onReset, onAddName, isShowed, isShowedBonus}) => {
         setSelectedOption(e.target.value);
       };
     const handleContentChange = (e) => {
-        setContent(e);
+      console.log(e)
+      let uniqueNewContent;
+      if (Array.isArray(e)) {
+      uniqueNewContent = e.filter(item => !content.includes(item));
+      if (uniqueNewContent.length > 0) {
+        const updatedContent = [...content, ...uniqueNewContent];
+        setContent(updatedContent);
+        localStorage.setItem('content', JSON.stringify(updatedContent));
+      }
+      } else {
+        //const newContent = e.split(',');
+        //console.log("new content" + newContent)
+        //uniqueNewContent = newContent.filter(item => !content.includes(item));
+        console.log('weszło')
+        localStorage.setItem('content', [e]);
+      }
       };
     return (
         <div className={styles.Home}>

@@ -25,7 +25,10 @@ const ButtonComponent = ({selectedOption, onContentChange, content, setContent})
       alert("Nie zaznaczono nic w pierwszym bloku!");
       return 0;
     }
-    if(event.target.id === 'zastap') onContentChange(newContent[0]);
+    if(event.target.id === 'zastap') {
+      onContentChange(newContent[0]);
+      setContent([newContent[0]]);
+    }
         else {
             if (content.indexOf(newContent[0]) === -1) onContentChange([...content, newContent[0]]);
           else alert("Taka wartość już istnieje!");

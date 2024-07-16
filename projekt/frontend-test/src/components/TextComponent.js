@@ -5,12 +5,12 @@ const TextComponent = ({content}) => {
   return (
     <div className={styles.Text}>
         <h4>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE I TO JEST TEN TEKST PRZYCIĘTY WŁAŚNIE</h4>
+        {console.log(content)}
         <div className={styles.Content}>Moje zainteresowania to:{
-          content.length < 1 ? (
-          content.sort((a, b) => a.localeCompare(b)).map((text, index) => (
-          <p key={index}>{text}</p>
-        ))) : (
-        <p>{content}</p> )
+         
+          [...new Set(content)].sort((a, b) => a.localeCompare(b)).map((text, index) => (
+          <p key={index}>{text}</p> ))
+       
         } </div>
     </div>
   );
