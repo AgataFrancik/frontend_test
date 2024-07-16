@@ -1,0 +1,45 @@
+.Block {
+    color: white;
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 200;
+.LaptopButton {
+    background: #2a2d36;
+    border: 1px solid #a4aab9;
+    color: #a4aab9;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 30%;
+    margin-right: 3%;
+    margin-left: 3%;
+    cursor: pointer;
+        &:hover {
+            background: linear-gradient(135deg, #FF4500, #FFA500);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+}
+.MobileButton {
+    background: #2a2d36;
+    border: 1px solid #a4aab9;
+    color: #a4aab9;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 50%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    cursor: pointer;
+        &:hover {
+            background: linear-gradient(135deg, #FF4500, #FFA500);
+            color: #fff;
+            border: 1px solid #fff;
+        }
+}
+.MobileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+}

@@ -1,0 +1,100 @@
+.LaptopHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    background: #0b0c10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    h1 {
+      margin: 0rem;
+      margin-right: 3rem;
+      color: #fff;
+      font-weight: 200;
+      font-size: 2rem;
+      display: flex;
+      align-items: baseline;
+      height: 4rem;
+    }
+    .name{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .textContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+  .circle {
+    padding-top: 0.5rem;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+    margin-left: 3rem;
+    background-color: #303030;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  .circle:hover {
+    background: #FFA500;
+}
+  .logoContainer{
+    text-decoration: none;
+  }
+}
+
+  .MobileHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    background: #0b0c10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    h1 {
+      margin-bottom: 2rem;
+      margin-right: 3rem;
+      color: #fff;
+      font-weight: 200;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: baseline;
+      height: 4rem;
+    }
+    .name{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -3rem;
+      margin-bottom: 0rem;
+    }
+    .textContainer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  .circle {
+    padding-top: 0.5rem;
+    width: 3.5rem;
+    aspect-ratio: 1 / 1;
+    margin-left: 3rem;
+    background-color: #303030;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  .circle:hover {
+    background: #FFA500;
+}
+  .logoContainer{
+    text-decoration: none;
+  }

@@ -1,0 +1,51 @@
+.container {
+    background: #fff;
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    bottom: 27%;
+    right: 0;
+    padding: 0.5%;
+    margin-right: 3%;
+    @media (min-width: 960px) {
+        width: 15%;
+        height: 6%;
+        
+      }
+    .button{
+        width: 70%;
+        height: 30%;
+        border: none;
+        background: none;
+        font-weight: 600;
+        font-size: 0.7rem;
+        &:hover{
+            color: #FFA500;
+        }
+    }
+}
+.containerBonus {
+    background: #fff;
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    bottom: 17%;
+    right: 0;
+    padding: 0.5%;
+    margin-right: 3%;
+    @media (min-width: 960px) {
+        width: 15%;
+        height: 6%;
+      }
+    .button{
+        width: 70%;
+        height: 30%;
+        border: none;
+        background: none;
+        font-weight: 600;
+        font-size: 0.7rem;
+        &:hover{
+            color: #FFA500;
+        }
+    }
+}

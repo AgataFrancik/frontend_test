@@ -1,0 +1,20 @@
+.Text{
+    color: #fff;
+    max-width: 100%;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    
+    .Content {
+        font-size: 1rem;
+        font-weight: 100;
+        color: #a4aab9;
+    }
+}
+h4 {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
